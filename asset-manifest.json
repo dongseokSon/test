@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/xen-media/static/css/main.ad4e2d21.css",
-    "main.js": "/xen-media/static/js/main.e7090056.js",
+    "main.css": "/xen-media/static/css/main.48e164e9.css",
+    "main.js": "/xen-media/static/js/main.ad22dd65.js",
     "static/js/453.5b616ce9.chunk.js": "/xen-media/static/js/453.5b616ce9.chunk.js",
     "static/media/main_bg.jpg": "/xen-media/static/media/main_bg.e30178e4d89ebafbb322.jpg",
     "static/media/M4-New Concept of Fixed Structure 2.png": "/xen-media/static/media/M4-New Concept of Fixed Structure 2.a3f21032c92270c7decf.png",
     "static/media/bsi_logo.svg": "/xen-media/static/media/bsi_logo.1d8417e671db15c86aeacf243cf75086.svg",
     "index.html": "/xen-media/index.html",
     "static/media/search_icon.svg": "/xen-media/static/media/search_icon.1ae82fe93f6d47c8f5979cf1a2ee665c.svg",
-    "main.ad4e2d21.css.map": "/xen-media/static/css/main.ad4e2d21.css.map",
-    "main.e7090056.js.map": "/xen-media/static/js/main.e7090056.js.map",
+    "main.48e164e9.css.map": "/xen-media/static/css/main.48e164e9.css.map",
+    "main.ad22dd65.js.map": "/xen-media/static/js/main.ad22dd65.js.map",
     "453.5b616ce9.chunk.js.map": "/xen-media/static/js/453.5b616ce9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad4e2d21.css",
-    "static/js/main.e7090056.js"
+    "static/css/main.48e164e9.css",
+    "static/js/main.ad22dd65.js"
   ]
 }
