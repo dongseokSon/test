@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/test.io/static/css/main.f5940836.css",
+    "main.js": "/test.io/static/js/main.bd9f5293.js",
+    "static/js/453.5b616ce9.chunk.js": "/test.io/static/js/453.5b616ce9.chunk.js",
+    "static/media/main_bg.jpg": "/test.io/static/media/main_bg.e30178e4d89ebafbb322.jpg",
+    "static/media/M4-New Concept of Fixed Structure 2.png": "/test.io/static/media/M4-New Concept of Fixed Structure 2.a3f21032c92270c7decf.png",
+    "static/media/bsi_logo.svg": "/test.io/static/media/bsi_logo.1d8417e671db15c86aeacf243cf75086.svg",
+    "index.html": "/test.io/index.html",
+    "static/media/search_icon.svg": "/test.io/static/media/search_icon.1ae82fe93f6d47c8f5979cf1a2ee665c.svg",
+    "main.f5940836.css.map": "/test.io/static/css/main.f5940836.css.map",
+    "main.bd9f5293.js.map": "/test.io/static/js/main.bd9f5293.js.map",
+    "453.5b616ce9.chunk.js.map": "/test.io/static/js/453.5b616ce9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5940836.css",
+    "static/js/main.bd9f5293.js"
+  ]
+}
