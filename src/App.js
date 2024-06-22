@@ -29,43 +29,44 @@ const MAIN_TEXT = [
 ];
 
 export default function App() {
-  const [accordianStates, setAccordianStates] = useState(Array(6).fill(false));
+  const [accordianState, setAccordianState] = useState(-1);
 
-  const toggleAccordian = (index) => {
-    setAccordianStates((prevStates) =>
-      prevStates.map((isOpen, i) => (i === index ? !isOpen : isOpen))
-    );
+  const handleAccordianToggle = (index) => {
+    if (accordianState === index) {
+      setAccordianState(-1);
+    } else {
+      setAccordianState(index);
+    }
   };
-
   return (
     <div className="App">
-      <header className="sticky top-0 z-50 bg-white p-4 flex my-auto justify-between w-full px-40 h-[104px] max-w-[1920px] mx-auto">
-        <div className="my-auto mr-6">
+      <header className="sticky top-0 z-50 bg-white p-4 flex my-auto justify-between w-full px-40 h-[104px]">
+        <div className="my-auto mr-6 cursor-pointer">
           <BSI_LOGO />
         </div>
         <nav className="flex my-auto items-center justify-between gap-[72px]">
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 cursor-pointer">
             <div>HOME</div>
           </ul>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 cursor-pointer">
             <div>PRODUCTS</div>
             <div className="m-auto">
               <MdOutlineKeyboardArrowDown size="20" />
             </div>
           </ul>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 cursor-pointer">
             <div>CAPABILITIES</div>
             <div className="m-auto">
               <MdOutlineKeyboardArrowDown size="20" />
             </div>
           </ul>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 cursor-pointer">
             <div>INDUSTRIES</div>
             <div className="m-auto">
               <MdOutlineKeyboardArrowDown size="20" />
             </div>
           </ul>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 cursor-pointer">
             <div>COMPANY</div>
             <div className="m-auto">
               <MdOutlineKeyboardArrowDown size="20" />
@@ -85,7 +86,7 @@ export default function App() {
         </div>
       </header>
       <div
-        className="h-[1100px] bg-fixed bg-center bg-no-repeat bg-cover flex items-center text-center justify-center text-white text-3xl"
+        className="flex items-center justify-center h-screen text-3xl text-center text-white bg-fixed bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${mainBg})` }}
       >
         <div className="flex flex-col items-center">
@@ -101,8 +102,8 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="px-40 py-24 text-center text-[#222222]">
-        <div className="max-w-[1920px] mx-auto">
+      <div className="px-40 py-24 text-center text-[#222222] max-w-[1920px] mx-auto">
+        <div className="mx-auto">
           <div className="mb-5 text-sm font-bold text-[#CCCCCC]">FEATURES</div>
           <div className="mb-12 text-5xl font-bold">
             Lower price, higher performance
@@ -113,21 +114,21 @@ export default function App() {
             </div>
 
             <div className="w-full align-top">
-              {accordianStates.map((isOpen, index) => (
+              {Array.from({ length: 6 }, (_, index) => (
                 <Accordian
                   key={index}
                   index={index}
-                  isOpen={isOpen}
+                  isOpen={accordianState === index}
                   titleText={`${TITLES[index]}`}
                   mainText={`${MAIN_TEXT[index]}`}
-                  onToggle={() => toggleAccordian(index)}
+                  onToggle={() => handleAccordianToggle(index)}
                 />
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="px-40 py-24 pb-[500px] bg-[#222222] text-white font-bold">
+      <div className="px-40 py-24 bg-[#222222] text-white font-bold">
         <div className="flex justify-center m-auto gap-14 max-w-[1920px]">
           <div className="flex flex-col gap-5 mx-auto">
             <div className="text-sm text-[#CCCCCC]">INSTALLATION EXAMPLES</div>
@@ -140,7 +141,7 @@ export default function App() {
               <li>Screen size: 41 x 3 m</li>
             </ul>
           </div>
-          <div className="relative flex flex-col w-full h-[600px] items-start">
+          <div className="relative flex flex-col w-full h-[400px] items-start">
             <iframe
               src="https://player.vimeo.com/video/936450207?h=d546bc6e30"
               className="relative top-0 left-0 w-full h-full"
