@@ -129,7 +129,7 @@ export default function App() {
         </div>
       </div>
       <div className="px-40 py-24 bg-[#222222] text-white font-bold">
-        <div className="flex justify-center m-auto gap-14 max-w-[1920px]">
+        <div className="flex justify-center gap-14 max-w-[1920px] mx-auto">
           <div className="flex flex-col gap-5 mx-auto">
             <div className="text-sm text-[#CCCCCC]">INSTALLATION EXAMPLES</div>
             <h1 className="text-5xl">
