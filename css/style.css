@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  padding: 1rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 72px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.search-icon img {
+  cursor: pointer;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: #e00024;
+  border-radius: 70px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid white;
+}
+
+.contact-button:hover {
+  background: white;
+  color: #e00024;
+  border: 1px solid #e00024;
+}
+
+.main-bg {
+  background: url("./assets/images/main_bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.main-content .tag {
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.main-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.details {
+  font-size: 1rem;
+  font-weight: medium;
+}
+
+.features {
+  padding: 3rem 10rem;
+  text-align: center;
+}
+
+.features-header .sub-header {
+  color: #cccccc;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.features-header .main-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.features-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.installation-examples {
+  background: #222222;
+  color: white;
+  padding: 3rem 10rem;
+}
+
+.installation-examples .example-header {
+  color: #cccccc;
+  font-size: 0.875rem;
+}
+
+.installation-examples h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.installation-examples ul {
+  list-style: disc inside;
+  font-size: 1rem;
+  font-weight: medium;
+}
+
+.example-video {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.example-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
