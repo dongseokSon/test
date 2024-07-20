@@ -5,26 +5,26 @@ on:
     branches:
       - main
 jobs:
-deploy:
-  runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 22.x
+      - name: Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Build Docs
-      run: npm run build
+      - name: Build Docs
+        run: npm run build
 
-    - name: Deploy Docs
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
