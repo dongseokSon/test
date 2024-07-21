@@ -143,6 +143,7 @@ export default function App() {
           </div>
           <div className="relative flex flex-col w-full h-[400px] items-start">
             <iframe
+              title="video"
               src="https://player.vimeo.com/video/936450207?h=d546bc6e30"
               className="relative top-0 left-0 w-full h-full"
               allow="autoplay; fullscreen"
