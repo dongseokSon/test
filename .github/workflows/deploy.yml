@@ -7,6 +7,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout
@@ -17,11 +22,22 @@ jobs:
         with:
           node-version: 22.x
 
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Docs
-        run: npm run build --prefix client
+        run: |
+          npm run build
+          cp ./build/index.html ./build/404.html
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
