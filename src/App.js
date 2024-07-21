@@ -46,7 +46,7 @@ export default function App() {
         </div>
         <nav className="flex my-auto items-center justify-between gap-[72px]">
           <ul className="flex gap-3 cursor-pointer">
-            <div>HOME</div>
+            <div>타이틀</div>
           </ul>
           <ul className="flex gap-3 cursor-pointer">
             <div>PRODUCTS</div>
