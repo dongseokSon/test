@@ -1,9 +1,9 @@
 name: Deployment
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,6 +12,9 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}
       cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
 
     steps:
       - name: Checkout
